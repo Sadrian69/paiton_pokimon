@@ -1,0 +1,1475 @@
+ACTIONS
+        DISPLAY "Mencari Pokemon Generasi 1"
+        FIND support
+        DISPLAY "Pokemon yang anda cari adalah: {support}"
+;
+
+RULE 1
+        IF bentuk_badan = humanoid and
+                cara_berdiri = bipedal and
+                warna = merah_jingga 
+        THEN support = Magmar;
+        
+RULE 2
+        IF bentuk_badan = humanoid and
+                cara_berdiri = bipedal and
+                warna = biru and
+                anggota_badan = 4 and
+                ukuran = kecil 
+        THEN support = Machop;
+
+RULE 3
+        IF bentuk_badan = humanoid and
+                cara_berdiri = bipedal and
+                warna = biru and
+                anggota_badan = 4 and
+                ukuran = sedang 
+        THEN support = Poliwhirl;
+
+RULE 4
+        IF bentuk_badan = humanoid and
+                cara_berdiri = bipedal and
+                warna = biru and
+                anggota_badan = 4 and
+                ukuran = besar and
+                kepala_terpisah = no
+        THEN support = Poliwrath;
+		
+RULE 5
+        IF bentuk_badan = humanoid and
+                cara_berdiri = bipedal and
+                warna = biru and
+                anggota_badan = 4 and
+                ukuran = besar and
+                kepala_terpisah = yes
+        THEN support = Snorlax;
+		
+RULE 6 
+        IF bentuk_badan = humanoid and 
+                cara_berdiri = bipedal and 
+                warna = biru and 
+                anggota_badan = lebih_4 
+        THEN support = Machamp;
+
+RULE 7 
+        IF bentuk_badan = humanoid and 
+                cara_berdiri = bipedal and 
+                warna = kuning and 
+                anggota_badan = 4 and 
+                ukuran = kecil 
+        THEN support = Abra;
+
+RULE 8 
+        IF bentuk_badan = humanoid and 
+                cara_berdiri = bipedal and 
+                warna = kuning and 
+                anggota_badan = 4 and 
+                ukuran = sedang and 
+                sendok = no
+        THEN support = Electabuzz;
+
+RULE 9 
+        IF bentuk_badan = humanoid and 
+                cara_berdiri = bipedal and 
+                warna = kuning and 
+                anggota_badan = 4 and 
+                ukuran = sedang and 
+                sendok = yes
+        THEN support = Kadabra;
+
+RULE 10 
+        IF bentuk_badan = humanoid and 
+                cara_berdiri = bipedal and 
+                warna = kuning and 
+                anggota_badan = 4 and 
+                ukuran = besar 
+        THEN support = Alakazam;
+
+RULE 11 
+        IF bentuk_badan = humanoid and 
+                cara_berdiri = bipedal and 
+                warna = cokelat and 
+                anggota_badan = 4 and 
+                ukuran = sedang 
+        THEN support = Hitmonchan;
+
+RULE 12 
+        IF bentuk_badan = humanoid and 
+                cara_berdiri = bipedal and 
+                warna = cokelat and 
+                anggota_badan = 4 and 
+                ukuran = besar 
+        THEN support = Hitmonlee;
+
+RULE 13 
+        IF bentuk_badan = humanoid and 
+                cara_berdiri = bipedal and 
+                warna = ungu and 
+                anggota_badan = 4 and 
+                ukuran = sedang 
+        THEN support = Jynx;
+
+RULE 14 
+        IF bentuk_badan = humanoid and 
+                cara_berdiri = bipedal and 
+                warna = ungu and 
+                anggota_badan = 4 and 
+                ukuran = besar 
+        THEN support = Mewtwo;
+
+RULE 15 
+        IF bentuk_badan = humanoid and 
+                cara_berdiri = bipedal and 
+                warna = pink and 
+                anggota_badan = 4 and 
+                ukuran = kecil and 
+                sayap = no and 
+                ekor = yes and
+                ekor_panjang = no
+        THEN support = Clefairy;
+
+RULE 16
+        IF bentuk_badan = humanoid and 
+                cara_berdiri = bipedal and 
+                warna = pink and 
+                anggota_badan = 4 and 
+                ukuran = kecil and 
+                sayap = no and 
+                ekor = yes and
+                ekor_panjang = yes
+        THEN support = Mew;
+
+RULE 17 
+        IF bentuk_badan = humanoid and 
+                cara_berdiri = bipedal and 
+                warna = pink and 
+                anggota_badan = 4 and 
+                ukuran = kecil and 
+                sayap = no and 
+                ekor = no 
+        THEN support = Jigglypuff;
+
+RULE 18 
+        IF bentuk_badan = humanoid and 
+                cara_berdiri = bipedal and 
+                warna = pink and 
+                anggota_badan = 4 and 
+                ukuran = sedang and 
+                sayap = no and 
+                ekor = yes 
+        THEN support = Clefable;
+
+RULE 19 
+        IF bentuk_badan = humanoid and 
+                cara_berdiri = bipedal and 
+                warna = pink and 
+                anggota_badan = 4 and 
+                ukuran = sedang and 
+                sayap = no and 
+                ekor = no and
+                jari = no
+        THEN support = Wigglytuff;
+
+RULE 20 
+        IF bentuk_badan = humanoid and 
+                cara_berdiri = bipedal and 
+                warna = pink and 
+                anggota_badan = 4 and 
+                ukuran = sedang and 
+                sayap = no and 
+                ekor = no and
+                jari = yes
+        THEN support = MrMime;
+
+RULE 21 
+        IF bentuk_badan = humanoid and 
+                cara_berdiri = bipedal and 
+                warna = abu and 
+                anggota_badan = 4 and 
+                ukuran = kecil
+        THEN support = Machop;
+
+RULE 22 
+        IF bentuk_badan = humanoid and 
+                cara_berdiri = bipedal and 
+                warna = abu and 
+                anggota_badan = 4 and 
+                ukuran = sedang 
+        THEN support = Machoke;
+
+RULE 23 
+        IF bentuk_badan = humanoid and 
+                cara_berdiri = bipedal and 
+                warna = abu and 
+                anggota_badan = lebih_4 and 
+                ukuran = besar
+        THEN support = Machamp;
+
+RULE 24 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = merah_jingga and 
+                anggota_badan = 2 
+        THEN support = Moltres;
+
+RULE 25 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = merah_jingga and 
+                anggota_badan = 4 and 
+                ukuran = kecil 
+        THEN support = Charmander;
+
+RULE 26 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = merah_jingga and 
+                anggota_badan = 4 and 
+                ukuran = sedang
+        THEN support = Charmeleon;
+
+RULE 27 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = merah_jingga and 
+                anggota_badan = 4 and 
+                ukuran = besar and
+                api = no
+        THEN support = Dragonite;
+
+RULE 28 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = merah_jingga and 
+                anggota_badan = 4 and 
+                ukuran = besar and
+                api = yes
+        THEN support = Charizard;
+
+RULE 29 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = hijau 
+        THEN support = Scyther;
+
+RULE 30 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = biru and 
+                anggota_badan = 2 and 
+                ukuran = kecil 
+        THEN support = Poliwag;
+
+RULE 31 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = biru and 
+                anggota_badan = 2 and 
+                ukuran = besar 
+        THEN support = Articuno;
+
+RULE 32 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = biru and 
+                anggota_badan = 4 and 
+                ukuran = kecil 
+        THEN support = Squirtle;
+
+RULE 33 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = biru and 
+                anggota_badan = 4 and 
+                ukuran = sedang and
+                cangkang = no
+        THEN support = Nidorina;
+
+RULE 34 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = biru and 
+                anggota_badan = 4 and 
+                ukuran = sedang and
+                cangkang = yes
+        THEN support = Wartortle;
+
+RULE 35 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = biru and 
+                anggota_badan = 4 and 
+                ukuran = besar and 
+                cangkang = no and
+                selaput = no
+        THEN support = Nidoqueen;
+
+RULE 36 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = biru and 
+                anggota_badan = 4 and 
+                ukuran = besar and 
+                cangkang = no and
+                selaput = yes
+        THEN support = Golduck;
+
+RULE 37 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = biru and 
+                anggota_badan = 4 and 
+                ukuran = besar and 
+                cangkang = yes
+        THEN support = Blastoise;
+
+RULE 38 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = biru and 
+                anggota_badan = 4 and 
+                ukuran = besar and 
+                sayap = no and 
+                ekor = no 
+        THEN support = Snorlax;
+
+RULE 39 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = kuning and 
+                anggota_badan = 2 and 
+                ukuran = kecil 
+        THEN support = Pidgey;
+
+RULE 40 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = kuning and 
+                anggota_badan = 2 and 
+                ukuran = sedang 
+        THEN support = Pidgeotto;
+
+RULE 41 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = kuning and 
+                anggota_badan = 2 and 
+                ukuran = besar and 
+                bulu_tajam = no
+        THEN support = Pidgeot;
+
+RULE 42 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = kuning and 
+                anggota_badan = 2 and 
+                ukuran = besar and 
+                bulu_tajam = yes
+        THEN support = Zapdos;
+
+RULE 43 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = kuning and 
+                anggota_badan = 4 and 
+                ukuran = kecil and
+                pelindung = no and
+                kumis = no
+        THEN support = Abra;
+
+RULE 44 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = kuning and 
+                anggota_badan = 4 and 
+                ukuran = kecil and
+                pelindung = no and
+                kumis = yes
+        THEN support = Meowth;
+
+RULE 45 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = kuning and 
+                anggota_badan = 4 and 
+                ukuran = kecil and
+                pelindung = yes
+        THEN support = Sandshrew;
+
+RULE 46 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = kuning and 
+                anggota_badan = 4 and 
+                ukuran = sedang and 
+                sayap = yes 
+        THEN support = Beedrill;
+
+RULE 47 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = kuning and 
+                anggota_badan = 4 and 
+                ukuran = sedang and 
+                sayap = no and 
+                ekor = yes and
+                sendok = no
+        THEN support = Psyduck;
+
+RULE 48 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = kuning and 
+                anggota_badan = 4 and 
+                ukuran = sedang and 
+                sayap = no and 
+                ekor = yes and
+                sendok = yes
+        THEN support = Kadabra;
+
+RULE 49 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = kuning and 
+                anggota_badan = 4 and 
+                ukuran = sedang and 
+                sayap = no and 
+                ekor = no 
+        THEN support = Drowzee;
+
+RULE 50 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = kuning and 
+                anggota_badan = 4 and 
+                ukuran = besar and 
+                sayap = no and 
+                ekor = yes 
+        THEN support = Alakazam;
+
+RULE 51 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = kuning and 
+                anggota_badan = 4 and 
+                ukuran = besar and 
+                sayap = no and 
+                ekor = no 
+        THEN support = Hypno;
+
+RULE 52 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = cokelat and 
+                anggota_badan = 2 and 
+                ukuran = kecil 
+        THEN support = Spearow;
+
+RULE 53 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = cokelat and 
+                anggota_badan = 2 and 
+                ukuran = sedang and 
+                sayap = yes 
+        THEN support = Fearow;
+
+RULE 54 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = cokelat and 
+                anggota_badan = 2 and 
+                ukuran = sedang and 
+                sayap = no 
+        THEN support = Doduo;
+
+RULE 55 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = cokelat and 
+                anggota_badan = 2 and 
+                ukuran = besar 
+        THEN support = Dodrio;
+
+RULE 56 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = cokelat and 
+                anggota_badan = 4 and 
+                ukuran = kecil and 
+                topeng = no
+        THEN support = Mankey;
+        
+RULE 57 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = cokelat and 
+                anggota_badan = 4 and 
+                ukuran = kecil and 
+                topeng = yes
+        THEN support = Cubone;
+
+RULE 58 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = cokelat and 
+                anggota_badan = 4 and 
+                ukuran = sedang and 
+                sayap = yes 
+        THEN support = Farfetchd;
+
+RULE 59 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = cokelat and 
+                anggota_badan = 4 and 
+                ukuran = sedang and 
+                sayap = no and 
+                ekor = yes and
+                duri = no and
+                topeng = no and
+                sabit = no
+        THEN support = Primeape;
+        
+RULE 60 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = cokelat and 
+                anggota_badan = 4 and 
+                ukuran = sedang and 
+                sayap = no and 
+                ekor = yes and
+                duri = no and
+                topeng = no and
+                sabit = yes
+        THEN support = Kabutops;
+        
+RULE 61 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = cokelat and 
+                anggota_badan = 4 and 
+                ukuran = sedang and 
+                sayap = no and 
+                ekor = yes and
+                duri = no and
+                topeng = yes
+        THEN support = Marowak;
+        
+RULE 62 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = cokelat and 
+                anggota_badan = 4 and 
+                ukuran = sedang and 
+                sayap = no and 
+                ekor = yes and
+                duri = yes
+        THEN support = Sandslash;
+
+RULE 63 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = cokelat and 
+                anggota_badan = 4 and 
+                ukuran = sedang and 
+                sayap = no and 
+                ekor = no 
+        THEN support = Golem;
+
+RULE 64 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = cokelat and 
+                anggota_badan = 4 and 
+                ukuran = besar and 
+                sayap = no and 
+                ekor = yes 
+        THEN support = Kangaskhan;
+
+RULE 65 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = cokelat and 
+                anggota_badan = 4 and 
+                ukuran = besar and 
+                sayap = no and 
+                ekor = no 
+        THEN support = Pinsir;
+
+RULE 66 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = ungu and 
+                anggota_badan = 2 
+        THEN support = Venonat;
+
+RULE 67 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = ungu and 
+                anggota_badan = 4 and 
+                ukuran = sedang 
+        THEN support = Butterfree;
+
+RULE 68 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = ungu and 
+                anggota_badan = 4 and 
+                ukuran = besar and 
+                sayap = yes 
+        THEN support = Aerodactyl;
+
+RULE 69 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = ungu and 
+                anggota_badan = 4 and 
+                ukuran = besar and 
+                sayap = no 
+        THEN support = Nidoking;
+
+RULE 70 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = pink and 
+                anggota_badan = 4 and 
+                ukuran = sedang and 
+                lidah = no
+        THEN support = Chansey;
+        
+RULE 71 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = pink and 
+                anggota_badan = 4 and 
+                ukuran = sedang and 
+                lidah = yes
+        THEN support = Lickitung;
+
+RULE 72 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = pink and 
+                anggota_badan = 4 and 
+                ukuran = besar
+        THEN support = Slowbro;
+
+RULE 73 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = abu and 
+                anggota_badan = 4 and 
+                ukuran = besar and 
+                sayap = yes 
+        THEN support = Aerodactyl;
+
+RULE 74 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = bipedal and 
+                warna = abu and 
+                anggota_badan = 4 and 
+                ukuran = besar and 
+                sayap = no 
+        THEN support = Rhydon;
+
+RULE 75 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = quadrupedal and 
+                warna = merah_jingga and 
+                anggota_badan = 4 and 
+                ukuran = kecil 
+        THEN support = Vulpix;
+
+RULE 76 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = quadrupedal and 
+                warna = merah_jingga and 
+                anggota_badan = 4 and 
+                ukuran = sedang and
+                belang = no
+        THEN support = Flareon;
+        
+RULE 77 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = quadrupedal and 
+                warna = merah_jingga and 
+                anggota_badan = 4 and 
+                ukuran = sedang and
+                belang = yes
+        THEN support = Growlithe;
+
+RULE 78 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = quadrupedal and 
+                warna = merah_jingga and 
+                anggota_badan = 4 and 
+                ukuran = besar 
+        THEN support = Arcanine;
+
+RULE 79 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = quadrupedal and 
+                warna = merah_jingga and 
+                anggota_badan = lebih_4 and 
+                ukuran = kecil and
+                jamur = no
+        THEN support = Krabby;
+        
+RULE 80 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = quadrupedal and 
+                warna = merah_jingga and 
+                anggota_badan = lebih_4 and 
+                ukuran = kecil and
+                jamur = yes
+        THEN support = Paras;
+
+RULE 81 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = quadrupedal and 
+                warna = merah_jingga and 
+                anggota_badan = lebih_4 and 
+                ukuran = sedang and 
+                jamur = no
+        THEN support = Kingler;
+        
+RULE 82 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = quadrupedal and 
+                warna = merah_jingga and 
+                anggota_badan = lebih_4 and 
+                ukuran = sedang and 
+                jamur = yes
+        THEN support = Parasect;
+
+RULE 83 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = quadrupedal and 
+                warna = hijau and 
+                anggota_badan = 4 and 
+                ukuran = kecil and 
+                sayap = no and 
+                ekor = yes 
+        THEN support = Caterpie;
+
+RULE 84 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = quadrupedal and 
+                warna = hijau and 
+                anggota_badan = 4 and 
+                ukuran = kecil and 
+                sayap = no and 
+                ekor = no 
+        THEN support = Bulbasaur;
+
+RULE 85 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = quadrupedal and 
+                warna = hijau and 
+                anggota_badan = 4 and 
+                ukuran = sedang 
+        THEN support = Ivysaur;
+
+RULE 86 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = quadrupedal and 
+                warna = hijau and 
+                anggota_badan = 4 and 
+                ukuran = besar 
+        THEN support = Venusaur;
+
+RULE 87 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = quadrupedal and 
+                warna = biru and 
+                anggota_badan = 4 and 
+                ukuran = kecil 
+        THEN support = Nidoran♀;
+
+RULE 88 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = quadrupedal and 
+                warna = biru and 
+                anggota_badan = 4 and 
+                ukuran = sedang
+        THEN support = Vaporeon;
+
+RULE 89 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = quadrupedal and 
+                warna = kuning and 
+                anggota_badan = 4 and 
+                ukuran = kecil 
+        THEN support = Pikachu;
+
+RULE 90 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = quadrupedal and 
+                warna = kuning and 
+                anggota_badan = 4 and 
+                ukuran = sedang and
+                ekor_banyak = no and
+                kumis = no and
+                api = no
+        THEN support = Jolteon;
+        
+RULE 91 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = quadrupedal and 
+                warna = kuning and 
+                anggota_badan = 4 and 
+                ukuran = sedang and
+                ekor_banyak = no and
+                kumis = no and
+                api = yes
+        THEN support = Ponyta;
+        
+RULE 92 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = quadrupedal and 
+                warna = kuning and 
+                anggota_badan = 4 and 
+                ukuran = sedang and
+                ekor_banyak = no and
+                kumis = yes
+        THEN support = Persian;
+        
+RULE 93 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = quadrupedal and 
+                warna = kuning and 
+                anggota_badan = 4 and 
+                ukuran = sedang and
+                ekor_banyak = yes
+        THEN support = Ninetales;
+
+RULE 94 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = quadrupedal and 
+                warna = kuning and 
+                anggota_badan = 4 and 
+                ukuran = besar 
+        THEN support = Rapidash;
+
+RULE 95 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = quadrupedal and 
+                warna = cokelat and 
+                anggota_badan = 4 and 
+                ukuran = kecil and 
+                sayap = no and 
+                ekor = yes 
+        THEN support = Eevee;
+
+RULE 96 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = quadrupedal and 
+                warna = cokelat and 
+                anggota_badan = 4 and 
+                ukuran = kecil and 
+                sayap = no and 
+                ekor = no 
+        THEN support = Kabuto;
+
+RULE 97 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = quadrupedal and 
+                warna = cokelat and 
+                anggota_badan = 4 and 
+                ukuran = sedang and 
+                sayap = no and 
+                ekor = yes and
+                kumis = no
+        THEN support = Raichu;
+        
+RULE 98 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = quadrupedal and 
+                warna = cokelat and 
+                anggota_badan = 4 and 
+                ukuran = sedang and 
+                sayap = no and 
+                ekor = yes and
+                kumis = yes
+        THEN support = Raticate;
+
+RULE 99 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = quadrupedal and 
+                warna = cokelat and 
+                anggota_badan = 4 and 
+                ukuran = sedang and 
+                sayap = no and 
+                ekor = no 
+        THEN support = Tauros;
+
+RULE 100 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = quadrupedal and 
+                warna = ungu and 
+                anggota_badan = 4 and 
+                ukuran = kecil and
+                kumis = no
+        THEN support = Nidoran♂;
+        
+RULE 101 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = quadrupedal and 
+                warna = ungu and 
+                anggota_badan = 4 and 
+                ukuran = kecil and
+                kumis = yes
+        THEN support = Rattata;
+
+RULE 102 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = quadrupedal and 
+                warna = ungu and 
+                anggota_badan = 4 and 
+                ukuran = sedang 
+        THEN support = Nidorino;
+
+RULE 103 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = quadrupedal and 
+                warna = pink 
+        THEN support = Slowpoke;
+
+RULE 104 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = quadrupedal and 
+                warna = abu 
+        THEN support = Rhyhorn;
+
+RULE 105 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = lain_lain and 
+                warna = merah_jingga and 
+                anggota_badan = 0 and 
+                ukuran = kecil 
+        THEN support = Goldeen;
+
+RULE 106 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = lain_lain and 
+                warna = merah_jingga and 
+                anggota_badan = 0 and 
+                ukuran = sedang and
+                kumis = no
+        THEN support = Seaking;
+        
+RULE 107 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = lain_lain and 
+                warna = merah_jingga and 
+                anggota_badan = 0 and 
+                ukuran = sedang and
+                kumis = yes
+        THEN support = Magikarp;
+
+RULE 108 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = lain_lain and 
+                warna = hijau 
+        THEN support = Metapod;
+
+RULE 109 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = lain_lain and 
+                warna = biru and 
+                anggota_badan = 0 and 
+                ukuran = kecil and 
+                sayap = yes 
+        THEN support = Zubat;
+
+RULE 110 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = lain_lain and 
+                warna = biru and 
+                anggota_badan = 0 and 
+                ukuran = kecil and 
+                sayap = no and
+                sirip = no 
+        THEN support = Dratini;
+        
+RULE 111 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = lain_lain and 
+                warna = biru and 
+                anggota_badan = 0 and 
+                ukuran = kecil and 
+                sayap = no and
+                sirip = yes
+        THEN support = Horsea;
+
+RULE 112 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = lain_lain and 
+                warna = biru and 
+                anggota_badan = 0 and 
+                ukuran = sedang and 
+                sirip = no
+        THEN support = Dragonair;
+        
+RULE 113 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = lain_lain and 
+                warna = biru and 
+                anggota_badan = 0 and 
+                ukuran = sedang and 
+                sirip = yes
+        THEN support = Seadra;
+
+RULE 114 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = lain_lain and 
+                warna = biru and 
+                anggota_badan = 0 and 
+                ukuran = besar 
+        THEN support = Gyarados;
+
+RULE 115 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = lain_lain and 
+                warna = biru and 
+                anggota_badan = 2 and 
+                ukuran = sedang and 
+                sayap = yes 
+        THEN support = Golbat;
+
+RULE 116 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = lain_lain and 
+                warna = biru and 
+                anggota_badan = 2 and 
+                ukuran = sedang and 
+                sayap = no 
+        THEN support = Tentacool;
+
+RULE 117 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = lain_lain and 
+                warna = biru and 
+                anggota_badan = 4 
+        THEN support = Lapras;
+
+RULE 118 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = lain_lain and 
+                warna = biru and 
+                anggota_badan = lebih_4 and 
+                ukuran = kecil
+        THEN support = Omanyte;
+
+RULE 119 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = lain_lain and 
+                warna = biru and 
+                anggota_badan = lebih_4 and 
+                ukuran = sedang 
+        THEN support = Omastar;
+
+RULE 120 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = lain_lain and 
+                warna = biru and 
+                anggota_badan = lebih_4 and 
+                ukuran = besar 
+        THEN support = Tentacruel;
+
+RULE 121 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = lain_lain and 
+                warna = kuning
+        THEN support = Kakuna;
+
+RULE 122 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = lain_lain and 
+                warna = cokelat and 
+                anggota_badan = lebih_4 and 
+                ukuran = kecil 
+        THEN support = Weedle;
+
+RULE 123 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = lain_lain and 
+                warna = cokelat and 
+                anggota_badan = lebih_4 and 
+                ukuran = sedang
+        THEN support = Staryu;
+
+RULE 124 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = lain_lain and 
+                warna = ungu and 
+                anggota_badan = 0 and 
+                ukuran = kecil and 
+                sayap = no and 
+                ekor = yes 
+        THEN support = Ekans;
+
+RULE 125 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = lain_lain and 
+                warna = ungu and 
+                anggota_badan = 0 and 
+                ukuran = kecil and 
+                sayap = no and 
+                ekor = no 
+        THEN support = Shellder;
+
+RULE 126 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = lain_lain and 
+                warna = ungu and 
+                anggota_badan = 0 and 
+                ukuran = sedang 
+        THEN support = Arbok;
+
+RULE 127 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = lain_lain and 
+                warna = ungu and 
+                anggota_badan = 0 and 
+                ukuran = besar
+        THEN support = Cloyster;
+
+RULE 128 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = lain_lain and 
+                warna = ungu and 
+                anggota_badan = lebih_4 and 
+                ukuran = sedang
+        THEN support = Starmie;
+
+RULE 129 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = lain_lain and 
+                warna = ungu and 
+                anggota_badan = lebih_4 and 
+                ukuran = besar
+        THEN support = Venomoth;
+
+RULE 130 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = lain_lain and 
+                warna = abu and 
+                anggota_badan = 2 and 
+                ukuran = sedang 
+        THEN support = Seel;
+
+RULE 131 
+        IF bentuk_badan = hewan and 
+                cara_berdiri = lain_lain and 
+                warna = abu and 
+                anggota_badan = 2 and 
+                ukuran = besar
+        THEN support = Dewgong;
+
+RULE 132 
+        IF bentuk_badan = tanaman and 
+                cara_berdiri = bipedal and 
+                warna = biru and 
+                anggota_badan = 2 and 
+                ukuran = kecil 
+        THEN support = Oddish;
+
+RULE 133 
+        IF bentuk_badan = tanaman and 
+                cara_berdiri = bipedal and 
+                warna = biru and 
+                anggota_badan = 2 d 
+                ekor = no and
+                bunga = no
+        THEN support = Tangela;
+        
+RULE 134 
+        IF bentuk_badan = tanaman and 
+                cara_berdiri = bipedal and 
+                warna = biru and 
+                anggota_badan = 2 d 
+                ekor = no and
+                bunga = yes
+        THEN support = Gloom;
+
+RULE 135 
+        IF bentuk_badan = tanaman and 
+                cara_berdiri = bipedal and 
+                warna = biru and 
+                anggota_badan = 2 and 
+                ukuran = besar 
+        THEN support = Vileplume;
+
+RULE 136 
+        IF bentuk_badan = tanaman and 
+                cara_berdiri = bipedal and 
+                warna = kuning 
+        THEN support = Bellsprout;
+
+RULE 137 
+        IF bentuk_badan = tanaman and 
+                cara_berdiri = bipedal and 
+                warna = cokelat 
+        THEN support = Exeggutor;
+
+RULE 138 
+        IF bentuk_badan = tanaman and 
+                cara_berdiri = lain_lain and 
+                warna = kuning and 
+                anggota_badan = 2 and 
+                ukuran = sedang 
+        THEN support = Weepinbell;
+
+RULE 139 
+        IF bentuk_badan = tanaman and 
+                cara_berdiri = lain_lain and 
+                warna = kuning and 
+                anggota_badan = 2 and 
+                ukuran = besar
+        THEN support = Victreebel;
+
+RULE 140 
+        IF bentuk_badan = benda_mati and 
+                cara_berdiri = bipedal 
+        THEN support = Graveler;
+
+RULE 141 
+        IF bentuk_badan = benda_mati and 
+                cara_berdiri = lain_lain and 
+                warna = merah_jingga and 
+                anggota_badan = 0 and 
+                ukuran = kecil 
+        THEN support = Voltorb;
+
+RULE 142 
+        IF bentuk_badan = benda_mati and 
+                cara_berdiri = lain_lain and 
+                warna = merah_jingga and 
+                anggota_badan = 0 and 
+                ukuran = sedang 
+        THEN support = Electrode;
+
+RULE 143 
+        IF bentuk_badan = benda_mati and 
+                cara_berdiri = lain_lain and 
+                warna = pink 
+        THEN support = Exeggcute;
+
+RULE 144 
+        IF bentuk_badan = benda_mati and 
+                cara_berdiri = lain_lain and 
+                warna = abu and 
+                anggota_badan = 0 and 
+                ukuran = kecil
+        THEN support = Magnemite;
+
+RULE 145 
+        IF bentuk_badan = benda_mati and 
+                cara_berdiri = lain_lain and 
+                warna = abu and 
+                anggota_badan = 0 and 
+                ukuran = sedang 
+        THEN support = Magneton;
+
+RULE 146 
+        IF bentuk_badan = benda_mati and 
+                cara_berdiri = lain_lain and 
+                warna = abu and 
+                anggota_badan = 0 and 
+                ukuran = besar
+        THEN support = Onix;
+
+RULE 147 
+        IF bentuk_badan = benda_mati and 
+                cara_berdiri = lain_lain and 
+                warna = abu and 
+                anggota_badan = 2 
+        THEN support = Geodude;
+
+RULE 148 
+        IF bentuk_badan = abstrak and 
+                cara_berdiri = bipedal and 
+                warna = ungu 
+        THEN support = Gengar;
+
+RULE 149 
+        IF bentuk_badan = abstrak and 
+                cara_berdiri = bipedal and 
+                warna = pink 
+        THEN support = Porygon;
+
+RULE 150 
+        IF bentuk_badan = abstrak and 
+                cara_berdiri = lain_lain and 
+                warna = cokelat and 
+                anggota_badan = 0 and 
+                ukuran = kecil 
+        THEN support = Diglett;
+
+RULE 151 
+        IF bentuk_badan = abstrak and 
+                cara_berdiri = lain_lain and 
+                warna = cokelat and 
+                anggota_badan = 0 and 
+                ukuran = sedang 
+        THEN support = Dugtrio;
+
+RULE 152 
+        IF bentuk_badan = abstrak and 
+                cara_berdiri = lain_lain and 
+                warna = ungu and 
+                anggota_badan = 0 and 
+                ukuran = kecil and
+                gigi = no 
+        THEN support = Ditto;
+        
+RULE 153 
+        IF bentuk_badan = abstrak and 
+                cara_berdiri = lain_lain and 
+                warna = ungu and 
+                anggota_badan = 0 and 
+                ukuran = kecil and
+                gigi = yes
+        THEN support = Koffing;
+
+RULE 154 
+        IF bentuk_badan = abstrak and 
+                cara_berdiri = lain_lain and 
+                warna = ungu and 
+                anggota_badan = 0 and 
+                ukuran = sedang and
+                kepala2 = no
+        THEN support = Gastly;
+        
+RULE 155 
+        IF bentuk_badan = abstrak and 
+                cara_berdiri = lain_lain and 
+                warna = ungu and 
+                anggota_badan = 0 and 
+                ukuran = sedang and
+                kepala2 = yes
+        THEN support = Weezing;
+
+RULE 156 
+        IF bentuk_badan = abstrak and 
+                cara_berdiri = lain_lain and 
+                warna = ungu and 
+                anggota_badan = 2 and 
+                ukuran = sedang 
+        THEN support = Grimer;
+
+RULE 157 
+        IF bentuk_badan = abstrak and 
+                cara_berdiri = lain_lain and 
+                warna = ungu and 
+                anggota_badan = 2 and 
+                ukuran = besar and 
+                sayap = no and 
+                ekor = yes 
+        THEN support = Haunter;
+
+RULE 158 
+        IF bentuk_badan = abstrak and 
+                cara_berdiri = lain_lain and 
+                warna = ungu and 
+                anggota_badan = 2 and 
+                ukuran = besar and 
+                sayap = no and 
+                ekor = no 
+        THEN support = Muk;
+
+RULE 159
+        IF bentuk_badan = humanoid and
+                cara_berdiri = bipedal and
+                warna = biru and
+                anggota_badan = 4 and
+                ukuran = sedang and
+                kepala_terpisah = yes
+        THEN support = Machoke;
+
+ASK bentuk_badan: "Bentuk apakah Pokemon tersebut?";
+CHOICES bentuk_badan: humanoid, hewan, tanaman, benda_mati, abstrak;
+
+ASK cara_berdiri: "Bagaimanakah cara berdiri Pokemon tersebut?";
+CHOICES cara_berdiri: bipedal, quadrupedal, lain_lain;
+
+ASK warna: "Apa warna utama Pokemon tersebut?";
+CHOICES warna: merah_jingga, hijau, biru, kuning, cokelat, ungu, pink, abu;
+
+ASK anggota_badan: "Berapa anggota badan yang dimiliki Pokemon tersebut?";
+CHOICES anggota_badan: 0, 2, 4, banyak;
+
+ASK ukuran: "Seberapa besar Pokemon tersebut?";
+CHOICES ukuran: kecil, sedang, besar;
+
+ASK sayap: "Apakah Pokemon tersebut memiliki sayap?";
+CHOICES sayap: yes, no;
+
+ASK ekor: "Apakah Pokemon tersebut memiliki ekor?";
+CHOICES ekor: yes, no;
+
+ASK kepala_terpisah: "Apakah kepala Pokemon tersebut terpisah dengan badannya?";
+CHOICES kepala_terpisah: yes, no;
+
+ASK sendok: "Apakah Pokemon tersebut memegang sendok?";
+CHOICES sendok: yes, no;
+
+ASK ekor_panjang: "Apakah ekor Pokemon tersebut lebih panjang daripada badannya?";
+CHOICES ekor_panjang: yes, no;
+
+ASK jari: "Apakah tangan Pokemon tersebut memiliki jari?";
+CHOICES jari: yes, no;
+
+ASK api: "Apakah ada api yang menyala di badan Pokemon tersebut?";
+CHOICES api: yes, no;
+
+ASK cangkang: "Apakah Pokemon tersebut memiliki cangkang?";
+CHOICES cangkang: yes, no;
+
+ASK selaput: "Apakah Pokemon tersebut memiliki selaput di antara jari-jarinya?";
+CHOICES selaput: yes, no;
+
+ASK bulu_tajam: "Apakah bulu Pokemon tersebut tajam?";
+CHOICES bulu_tajam: yes, no;
+
+ASK pelindung: "Apakah Pokemon tersebut memiliki kulit pelindung?";
+CHOICES pelindung: yes, no;
+
+ASK kumis: "Apakah Pokemon tersebut memiliki kumis?";
+CHOICES kumis: yes, no;
+
+ASK topeng: "Apakah Pokemon tersebut memakai topeng?";
+CHOICES topeng: yes, no;
+
+ASK duri: "Apakah Pokemon tersebut berduri?";
+CHOICES topeng: yes, no;
+
+ASK sabit: "Apakah tangan Pokemon tersebut berbentuk sabit?";
+CHOICES sabit: yes, no;
+
+ASK lidah: "Apakah lidah Pokemon tersebut panjang?";
+CHOICES lidah: yes, no;
+
+ASK belang: "Apakah Pokemon tersebut memiliki motif belang?";
+CHOICES belang: yes, no;
+
+ASK jamur: "Apakah Pokemon tersebut memiliki jamur di badannya?";
+CHOICES jamur: yes, no;
+
+ASK ekor_banyak: "Apakah Pokemon tersebut memiliki banyak ekor?";
+CHOICES ekor_banyak: yes, no;
+
+ASK sirip: "Apakah Pokemon tersebut memiliki sirip?";
+CHOICES sirip: yes, no;
+
+ASK bunga: "Apakah Pokemon tersebut memiliki bunga?";
+CHOICES bunga: yes, no;
+
+ASK gigi: "Apakah Pokemon tersebut memiliki gigi?";
+CHOICES gigi: yes, no;
+
+ASK kepala2: "Apakah Pokemon tersebut memiliki 2 kepala?";
+CHOICES kepala2: yes, no;

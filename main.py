@@ -71,33 +71,40 @@ while not stop:
     # perubahan premise
     td = False
     for i in range(len(pcs)): # untuk semua pokemon
-        for j in range(len(pcs[i])): # cari atribut
-            if poke['attr'][i][j][0] == query: # kalo sama dg query
-                if poke['attr'][i][j][1] == value: # dan bener
-                    pcs[i][j] = 'TU'
-                else: # tapi salah
-                    # step 3a
-                    pcs[i][j] = 'FA'
-                    rs[i].remove('A')
-                    rs[i].append('D')
-                break
+        if 'A' in rs[i]:
+            for j in range(len(pcs[i])): # cari atribut
+                if poke['attr'][i][j][0] == query: # kalo sama dg query
+                    if poke['attr'][i][j][1] == value: # dan bener
+                        pcs[i][j] = 'TU'
+                        # print(poke['nama'][i])
+                    else: # tapi salah
+                        # step 3a
+                        pcs[i][j] = 'FA'
+                        rs[i].remove('A')
+                        rs[i].append('D')
+                    break
         # step 3b
         if pcs[i] == ['TU' for x in range(len(pcs[i]))]: # semua premis benar
             rs[i].append('TD')
+            # print("harusnya ini ", poke['nama'][i])
             td = True
     # step 3c
     if td:
         # step 4
-        del aq[0] # cross out topmost attr
+        if len(aq) > 0:
+            del aq[0] # cross out topmost attr
         for i in range(len(pcs)): # change status of rule 
             if 'TD' in rs[i]:
+                # print("harusnya ini ", poke['nama'][i])
                 rs[i].remove('TD')
                 rs[i].append('FD')
-        wm.append['conclusion', i] # conclusion at bottom of wm
+                wm.append(['conclusion', i]) # conclusion at bottom of wm
+        stop = True
         continue # return to 3
     else:
         # step 5
-        del aq[0] # cross out topmost attr
+        if len(aq) > 0:
+            del aq[0] # cross out topmost attr
         # step 6
         recent = -1 # recently marked rule
         unmarked = False # sudah pernah jalanin rule 8
@@ -115,16 +122,23 @@ while not stop:
                         print(prem[query], "?")
                         for k in choices[query]:
                             print(k)
+                        valInput = input()
                         if valInput not in choices[query]: # if no response
                             continue # continue
                         unmarked = True
                         value = choices[query].index(valInput)
+                        # step 8
                         aq.append(query)
                         wm.append([query,value])
                         rs[recent].remove('M')
-                        rs[recent].remove('U')
+                        rs[recent].append('U')
+                        break
         # step 6 cont
         if not unmarked: # no such rules can be found
             print("Gagal di step 6")
             stop = True
             break
+# sudah selesai, jawaban di wm
+for i in wm:
+    if i[0] == 'conclusion':
+        print(poke['nama'][i[1]])

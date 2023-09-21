@@ -123,8 +123,26 @@ while not stop:
                         for k in choices[query]:
                             print(k)
                         valInput = input()
-                        if valInput not in choices[query]: # if no response
-                            continue # continue
+                        # cek keberadaan itu di yang masih aktif
+                        valid = False
+                        if valInput in choices[query]:
+                            for i in range(len(rs)):
+                                if 'A' in rs[i]:
+                                    # print("test1", poke['nama'][i], query, valInput)
+                                    if [query, choices[query].index(valInput)] in poke['attr'][i]:
+                                        valid = True
+                        
+                        while valInput not in choices[query] or not valid: # if no response atau gaada
+                            print("Tidak menemukan data mohon coba lagi")
+                            valInput = input()
+                            # cek keberadaan itu di yang masih aktif
+                            if valInput in choices[query]:
+                                for i in range(len(rs)):
+                                    if 'A' in rs[i]:
+                                        # print("test2", poke['nama'][i], query, valInput)
+                                        if [query, choices[query].index(valInput)] in poke['attr'][i]:
+                                            valid = True
+                            
                         unmarked = True
                         value = choices[query].index(valInput)
                         # step 8

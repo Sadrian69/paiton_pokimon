@@ -69,11 +69,12 @@ def updateGUI(question, choices, message):
         master=window, text=((question, "?")), font="Calibri 12")
     pertanyaan.pack(pady=10)
 
-    clicked = StringVar()
-    print("dah choices: ", choices)
-    clicked.set(choices[0])
-    drop = OptionMenu(window, clicked, *choices)
-    drop.pack(pady=5)
+    if choices != []:
+        clicked = StringVar()
+        # print("dah choices: ", choices)
+        clicked.set(choices[0])
+        drop = OptionMenu(window, clicked, *choices)
+        drop.pack(pady=5)
 
     # global valInput
     # valInput = clicked.get()
@@ -138,7 +139,7 @@ updateGUI(questions['attribute'][query], optPil, "")
 # valInput = input()
 wm.loc[len(wm)] = pd.Series(
     {'attribute': questions['attribute'][query], 'value': valInput})
-print("dah sampe sini")
+# print("dah sampe sini")
 
 
 stop = False
@@ -165,6 +166,8 @@ while not stop:
     if not actFound:
         print("Pokemon tidak ditemukan")
         stop = True
+        window = tk.Tk()
+        updateGUI("", [], "Pokemon tidak ditemukan")
         break
 
     # perubahan premise
@@ -274,6 +277,8 @@ while not stop:
         # step 6 cont
         if not unmarked:  # no such rules can be found
             print("Pokemon tidak ditemukan")
+            window = tk.Tk()
+            updateGUI("", [], "Pokemon tidak ditemukan")
             stop = True
             break
 

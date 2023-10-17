@@ -2,6 +2,11 @@ import os
 import tkinter as tk
 import pandas as pd
 import numpy as np
+
+from tkinter import ttk
+from tkinter import *
+from PIL import ImageTk, Image
+
 pd.set_option('display.expand_frame_repr', False)
 
 package_dir = os.path.dirname(os.path.abspath(__file__))
@@ -9,17 +14,6 @@ package_dir = os.path.dirname(os.path.abspath(__file__))
 
 # jawaban
 ans = 'support'
-
-# algoritma engine
-# step 1
-# import data
-# premiseTable = pd.read_excel('C:/School/Semester_5/ASP/paiton_pokimon/pokemon.xlsx', 'Premise').astype(str)
-# rules = pd.read_excel('C:/School/Semester_5/ASP/paiton_pokimon/pokemon.xlsx', 'Rules').astype(str)
-# ruleDetails = pd.read_excel('C:/School/Semester_5/ASP/paiton_pokimon/pokemon.xlsx', 'Rule Detail').astype(str)
-# questions = pd.read_excel('C:/School/Semester_5/ASP/paiton_pokimon/pokemon.xlsx', 'Questions').astype(str)
-# choices = pd.read_excel('C:/School/Semester_5/ASP/paiton_pokimon/pokemon.xlsx', 'Choices').astype(str)
-# wm = pd.read_excel('C:/School/Semester_5/ASP/paiton_pokimon/pokemon.xlsx', 'WM Table').astype(str).reset_index(drop=True)
-
 
 premiseTable = pd.read_excel(os.path.join(
     package_dir, 'pokemon.xlsx'), 'Premise').astype(str)
@@ -34,15 +28,117 @@ choices = pd.read_excel(os.path.join(
 wm = pd.read_excel(os.path.join(package_dir, 'pokemon.xlsx'),
                    'WM Table').astype(str).reset_index(drop=True)
 
+
+valInput = ""
+clicked = ""
+window = tk.Tk()
+
+
+def pilPil():
+    global valInput
+    global clicked
+    global window
+    valInput = clicked.get()
+    window.destroy()
+
+
+def updateGUI(question, choices, message):
+    global clicked
+    global window
+
+    window.title("Pokemon Finder???")
+    # window.geometry("800x500+200+100")
+    window.iconbitmap("pikachu.ico")
+    window.resizable(False, False)
+
+    window_width = 800
+    window_height = 500
+    display_width = window.winfo_screenwidth()
+    display_height = window.winfo_screenheight()
+
+    left = int(display_width / 2 - window_width / 2)
+    top = int((display_height / 2 - window_height / 2)-50)
+
+    window.geometry(f'{window_width}x{window_height}+{left}+{top}')
+
+    title_label = ttk.Label(
+        master=window, text="Find the Pokemon", font="Calibri 24 bold")
+    title_label.pack(pady=10)
+
+    pertanyaan = ttk.Label(
+        master=window, text=((question, "?")), font="Calibri 12")
+    pertanyaan.pack(pady=10)
+
+    clicked = StringVar()
+    print("dah choices: ", choices)
+    clicked.set(choices[0])
+    drop = OptionMenu(window, clicked, *choices)
+    drop.pack(pady=5)
+
+    # global valInput
+    # valInput = clicked.get()
+
+    next = Button(window, text="Next", command=pilPil)
+
+    message = ttk.Label(master=window, text=message)
+    message.pack(pady=10)
+    next.pack()
+
+    window.mainloop()
+
+
+def GUIhasil(pokName):
+    window.title("Pokemon Finder???")
+    # window.geometry("800x500+200+100")
+    window.iconbitmap("pikachu.ico")
+    window.resizable(False, False)
+
+    window_width = 800
+    window_height = 500
+    display_width = window.winfo_screenwidth()
+    display_height = window.winfo_screenheight()
+
+    left = int(display_width / 2 - window_width / 2)
+    top = int((display_height / 2 - window_height / 2)-50)
+
+    window.geometry(f'{window_width}x{window_height}+{left}+{top}')
+
+    title_label = ttk.Label(
+        master=window, text=pokName, font="Calibri 24 bold")
+    title_label.pack(pady=10)
+
+    stringPok = "images/"
+    stringPok += pokName
+    stringPok += "_front_default.png"
+    stringPok = stringPok.lower()
+
+    image = Image.open(stringPok)
+    image = image.resize((350, 350), Image.ANTIALIAS)
+
+    pok_img = ImageTk.PhotoImage(image)
+    img_label = Label(image=pok_img)
+    img_label.pack()
+
+    next = Button(window, text="Done", command=window.destroy).pack()
+
+    window.mainloop()
+
+
 # step 2
 query = 0
+optPil = []
 print(questions['question'][query])
 for i in choices.index:
     if choices['id_question'][i] == questions['id'][query]:
         print(choices['choice'][i])
-valInput = input()
+        optPil.append(choices['choice'][i])
+
+updateGUI(questions['attribute'][query], optPil, "")
+
+# valInput = input()
 wm.loc[len(wm)] = pd.Series(
     {'attribute': questions['attribute'][query], 'value': valInput})
+print("dah sampe sini")
 
 
 stop = False
@@ -51,6 +147,9 @@ while not stop:
 
     print()
     print("Working Memory")
+
+    optPil = []
+
     for i in wm.index:
         print(wm['attribute'][i], ': ', wm['value'][i])
     print()
@@ -150,10 +249,17 @@ while not stop:
 
                         if questions['type'][idQuestion] == 'question':
                             print(questions['question'][query])
+
+                            optPil = []
+
                             for k in choices.index:
                                 if choices['id_question'][k] == questions['id'][query]:
-                                    print(choices['choice'][k])
-                            valInput = input()
+                                    # print(choices['choice'][k])
+                                    optPil.append(choices['choice'][k])
+                            # valInput = input(choices['choice'][k])
+
+                            window = tk.Tk()
+                            updateGUI(questions['question'][query], optPil, "")
 
                             # step 8
                             wm.loc[len(wm)] = pd.Series(
@@ -175,3 +281,5 @@ while not stop:
 for i in wm.index:
     if wm['attribute'][i] == ans:
         print('Pokemon yang anda cari adalah', wm['value'][i])
+        window = tk.Tk()
+        GUIhasil(wm['value'][i])

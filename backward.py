@@ -28,6 +28,29 @@ choices = pd.read_excel(os.path.join(
 wm = pd.read_excel(os.path.join(package_dir, 'pokemon.xlsx'),
                    'WM Table').astype(str).reset_index(drop=True)
 
+temp_rule = rules[rules['attribute_conclude'].str.match(ans)== True]
+conclude = temp_rule['id'].unique()
+# print(conclude)
+
+def addAnak(parent):
+    global conclude
+    temp_prem = ruleDetails[ruleDetails['rule_id'] == parent]['premise_id'].unique()
+    # print(temp_prem)
+    for i in temp_prem:
+        prem = premiseTable[premiseTable['id'] == i]['attribute'].unique()[0]
+        temp_rule = rules[rules['attribute_conclude'].str.match(prem)== True]['id'].unique()
+        conclude = np.concatenate((temp_rule, conclude), axis=None)
+
+while len(conclude) != len(rules.index):
+    cur = len(conclude)
+    for i in conclude:    
+        addAnak(i)
+        if cur != len(conclude):
+            break        
+
+conclude = conclude.astype(int)
+# print(conclude)
+
 
 valInput = ""
 clicked = ""
@@ -171,7 +194,8 @@ while not stop:
         break
 
     # perubahan premise
-    for i in rules.index:  # untuk semua rule
+    for i in conclude:  # untuk semua rule
+        i = i-1
         # print('rule', rules['id'][i])
         if rules['A'][i] == '1':
             for j in ruleDetails.index:  # cari premis

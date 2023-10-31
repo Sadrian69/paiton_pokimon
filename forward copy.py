@@ -32,8 +32,6 @@ wm = pd.read_excel(os.path.join(package_dir, 'pokemon.xlsx'),
 valInput = ""
 clicked = ""
 window = tk.Tk()
-msg = ""
-msgWhy = []
 
 
 def pilPil():
@@ -42,36 +40,7 @@ def pilPil():
     global window
     valInput = clicked.get()
     window.destroy()
-
-
-# def whyHow(textt):
-#     global window
-#     window.title("Pokemon Finder???")
-#     # window.geometry("800x500+200+100")
-#     window.iconbitmap("pikachu.ico")
-#     window.resizable(False, False)
-
-#     window_width = 800
-#     window_height = 500
-#     display_width = window.winfo_screenwidth()
-#     display_height = window.winfo_screenheight()
-
-#     left = int(display_width / 2 - window_width / 2)
-#     top = int((display_height / 2 - window_height / 2)-50)
-
-#     window.geometry(f'{window_width}x{window_height}+{left}+{top}')
-
-#     title_label = ttk.Label(
-#         master=window, text="Working Memory", font="Calibri 24 bold")
-#     title_label.pack(pady=10)
-
-#     message = ttk.Label(
-#         master=window, text=((textt)), font="Calibri 12")
-#     message.pack(pady=10)
-
-#     window.overrideredirect(True)
-#     window.mainloop()
-
+    
 def howPopUp():
     popup = Toplevel()
     popup.grab_set()
@@ -81,56 +50,27 @@ def howPopUp():
     popup.resizable(False, False)
 
     window_width = 800
-    window_height = 300
+    window_height = 200
     display_width = popup.winfo_screenwidth()
     display_height = popup.winfo_screenheight()
 
     left = int(display_width / 2 - window_width / 2)
-    top = int((display_height / 2 - window_height / 2)+120)
+    top = int((display_height / 2 - window_height / 2)+80)
 
     popup.geometry(f'{window_width}x{window_height}+{left}+{top}')
 
     title_label = ttk.Label(
         master=popup, text="How?", font="Calibri 24 bold")
     title_label.pack(pady=10)
-
-    message = ttk.Label(
-        master=popup, text=((msg)), font="Calibri 12")
-    message.pack(pady=10)
-
+    
     done = Button(popup, text="Done", command=popup.destroy).pack(pady=10)
     popup.overrideredirect(True)
-
-
+    
+    
 def whyPopUp():
     popup = Toplevel()
     popup.grab_set()
-    popup.title("Pokemon Finder???")
-    # window.geometry("800x500+200+100")
-    popup.iconbitmap("pikachu.ico")
-    popup.resizable(False, False)
-
-    window_width = 800
-    window_height = 300
-    display_width = popup.winfo_screenwidth()
-    display_height = popup.winfo_screenheight()
-
-    left = int(display_width / 2 - window_width / 2)
-    top = int((display_height / 2 - window_height / 2)+120)
-
-    popup.geometry(f'{window_width}x{window_height}+{left}+{top}')
-
-    title_label = ttk.Label(
-        master=popup, text="Why?", font="Calibri 24 bold")
-    title_label.pack(pady=10)
-
-    for i in msgWhy:
-        message = ttk.Label(
-            master=popup, text=((i)), font="Calibri 9")
-        message.pack()
-
-    done = Button(popup, text="Done", command=popup.destroy).pack(pady=10)
-    popup.overrideredirect(True)
+    
 
 
 def updateGUI(question, choices, message):
@@ -148,7 +88,7 @@ def updateGUI(question, choices, message):
     display_height = window.winfo_screenheight()
 
     left = int(display_width / 2 - window_width / 2)
-    top = int((display_height / 2 - window_height / 2)-50)
+    top = int((display_height / 2 - window_height / 2)-120)
 
     window.geometry(f'{window_width}x{window_height}+{left}+{top}')
 
@@ -156,9 +96,8 @@ def updateGUI(question, choices, message):
         master=window, text="Find the Pokemon", font="Calibri 24 bold")
     title_label.pack(pady=10)
 
-    question += " ?"
     pertanyaan = ttk.Label(
-        master=window, text=((question)), font="Calibri 12")
+        master=window, text=((question, "?")), font="Calibri 12")
     pertanyaan.pack(pady=10)
 
     if choices != []:
@@ -175,10 +114,14 @@ def updateGUI(question, choices, message):
 
     message = ttk.Label(master=window, text=message)
     message.pack(pady=10)
-    next.pack()
+    next.pack(pady=5)
 
-    why = Button(window, text="Why?", command=whyPopUp).pack(pady=5)
 
+    how = Button(window, text="How?", command=howPopUp)
+    why = Button(window, text="Why?", command=whyPopUp)
+    how.pack(pady=20)
+    why.pack()
+    
     window.overrideredirect(True)
     window.mainloop()
 
@@ -195,7 +138,7 @@ def GUIhasil(pokName):
     display_height = window.winfo_screenheight()
 
     left = int(display_width / 2 - window_width / 2)
-    top = int((display_height / 2 - window_height / 2)-50)
+    top = int((display_height / 2 - window_height / 2)-120)
 
     window.geometry(f'{window_width}x{window_height}+{left}+{top}')
 
@@ -247,66 +190,9 @@ while not stop:
 
     optPil = []
 
-    # message=""
-    # for i in wm.index:
-    #     print(wm['attribute'][i], ': ', wm['value'][i])
-    #     message+=wm['attribute'][i], ': ', wm['value'][i]
-    # print()
-
-    window = tk.Tk()
-
-    window.title("Pokemon Finder???")
-    # window.geometry("800x500+200+100")
-    window.iconbitmap("pikachu.ico")
-    window.resizable(False, False)
-
-    window_width = 800
-    window_height = 500
-    display_width = window.winfo_screenwidth()
-    display_height = window.winfo_screenheight()
-
-    left = int(display_width / 2 - window_width / 2)
-    top = int((display_height / 2 - window_height / 2)-50)
-
-    window.geometry(f'{window_width}x{window_height}+{left}+{top}')
-
-    title_label = ttk.Label(
-        master=window, text="Working Memory", font="Calibri 24 bold")
-    title_label.pack(pady=10)
-
-    akhir = ""
-    msgWhy = ["This question is asked because: "]
     for i in wm.index:
         print(wm['attribute'][i], ': ', wm['value'][i])
-        msgWm = wm['attribute'][i]
-        msgWm += ": "
-        msgWm += wm['value'][i]
-        msgWhy.append(msgWm)
-        message = ttk.Label(master=window, text=(msgWm), font="Calibri 10")
-        message.pack()
-        akhir = wm['value'][i]
-        akhir2 = wm['attribute'][i]
     print()
-
-    # message = ttk.Label(
-    #     master=window, text=((textt)), font="Calibri 12")
-    # message.pack(pady=10)
-
-    next = Button(window, text="Next", command=window.destroy)
-    next.pack(pady=5)
-
-    msg = akhir2
-    msg += " was set because, "
-    msg += akhir
-    msg += ": yes"
-
-    how = Button(window, text="How?", command=howPopUp).pack(pady=5)
-
-    window.overrideredirect(True)
-    window.mainloop()
-
-    # whyHow(message)
-    # window.destroy()
 
     # step 3
     # cek 'Active'
